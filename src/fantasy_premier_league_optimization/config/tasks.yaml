@@ -1,0 +1,75 @@
+analyze_fixtures_task:
+  description: >-
+    You are the Fixture & Team Form Specialist.
+
+    STEP 1: Call the tool `fpl_fixture_outlook` with parameter `horizon_gameweeks={{horizon_gameweeks}}`.
+    STEP 2: Copy the tool output **exactly** and return it as your final answer.
+
+    IMPORTANT RULES:
+    - You MUST call `fpl_fixture_outlook`.
+    - You MUST return ONLY the tool output. Do NOT add analysis, narrative, or extra text.
+    - Do NOT invent fixtures, teams, difficulty scores, or DGW/BGW data.
+  expected_output: >-
+    EXACT tool output from `fpl_fixture_outlook` (markdown table + embedded JSON block). Nothing else.
+  agent: fixture_analyst
+
+
+research_players_task:
+  description: >-
+    You are the Fantasy Football Data Researcher.
+
+    STEP 1: Call the tool `fpl_player_watchlist` with parameters:
+      - top_n=40
+      - min_minutes=180
+      - allow_flagged_players=false
+      - team_multipliers_json=(copy the JSON block from analyze_fixtures_task if available)
+    STEP 2: Copy the tool output **exactly** and return it as your final answer.
+
+    IMPORTANT RULES:
+    - You MUST call `fpl_player_watchlist`.
+    - You MUST return ONLY the tool output. Do NOT add narrative, xG/xA guesses, or extra text.
+    - Do NOT invent players, teams, prices, or points.
+  expected_output: >-
+    EXACT tool output from `fpl_player_watchlist` (markdown table + embedded JSON block). Nothing else.
+  agent: player_scout
+
+
+optimize_team_task:
+  description: >-
+    You are the Fantasy Lineup Optimization Engineer.
+
+    STEP 1: Call the tool `fpl_optimize_squad` with parameters:
+      - horizon_gameweeks={{horizon_gameweeks}}
+      - budget={{budget}}
+      - max_from_team=3
+      - must_include={{must_include}}
+      - avoid={{avoid}}
+      - risk_profile={{risk_profile}}
+      - allow_flagged_players=false
+      - team_multipliers_json=(copy the JSON block from fpl_fixture_outlook if available)
+    STEP 2: Copy the tool output **exactly** and return it as your final answer.
+
+    IMPORTANT RULES:
+    - You MUST call `fpl_optimize_squad`.
+    - You MUST return ONLY the tool output (JSON). Do NOT add commentary, code fences, or extra text.
+    - Do NOT invent players or re-use watchlist data directly; the tool handles optimization.
+  expected_output: >-
+    Raw JSON (no fences) with keys: horizon_gameweeks, budget, max_from_team, total_cost,
+    total_projected_points, captain, vice_captain, starting_11, bench, squad.
+  agent: optimization_engineer
+
+
+write_report_task:
+  description: >-
+    You are the FPL Strategy & Recommendations Writer.
+
+    STEP 1: Call the tool `fpl_generate_report` with default parameters (paths already point to artifacts).
+    STEP 2: Copy the tool output **exactly** and return it as your final answer.
+
+    IMPORTANT RULES:
+    - You MUST call `fpl_generate_report`.
+    - You MUST return ONLY the tool output. Do NOT add extra commentary.
+    - The report derives all data from artifacts/optimized_squad.json (produced by optimize_team_task).
+  expected_output: >-
+    EXACT tool output from `fpl_generate_report` (Markdown report). Nothing else.
+  agent: report_writer

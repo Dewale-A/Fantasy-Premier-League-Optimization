@@ -3,51 +3,51 @@
 ## Overview
 - Horizon: **1 gameweek(s)** (next GW only)
 - Squad cost: **£99.8** / £100.0
-- Total projected points (proxy): **107.71**
-- Captain: **Phil Foden**
-- Vice-captain: **Bruno Borges Fernandes**
+- Total projected points (proxy): **103.22**
+- Captain: **Nathan Collins**
+- Vice-captain: **Caoimhín Kelleher**
 
 ## Starting XI
 | Player | Pos | Team | Price | Proj | Own% | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| Robert Lynch Sánchez | GK | Chelsea | £4.9 | 5.59 | 14.9% | available |
-| Trevoh Chalobah | DEF | Chelsea | £5.5 | 7.74 | 17.7% | available |
-| Rúben dos Santos Gato Alves Dias | DEF | Man City | £5.6 | 6.50 | 6.4% | available |
-| Malo Gusto | DEF | Chelsea | £4.9 | 6.23 | 2.2% | available |
-| Phil Foden | MID | Man City | £8.8 | 11.90 | 35.7% | available |
-| Bruno Borges Fernandes | MID | Man Utd | £9.3 | 9.60 | 28.2% | available |
-| Harry Wilson | MID | Fulham | £5.6 | 9.46 | 11.9% | available |
-| Morgan Rogers | MID | Aston Villa | £7.1 | 8.81 | 12.4% | available |
-| Bukayo Saka | MID | Arsenal | £10.3 | 7.52 | 22.6% | available |
-| Dominic Calvert-Lewin | FWD | Leeds | £5.6 | 6.40 | 3.7% | available |
-| Hugo Ekitiké | FWD | Liverpool | £8.6 | 6.30 | 18.7% | available |
+| Caoimhín Kelleher | GK | Brentford | £4.6 | 8.17 | 9.9% | available |
+| Nathan Collins | DEF | Brentford | £5.0 | 9.46 | 3.5% | available |
+| Gabriel dos Santos Magalhães | DEF | Arsenal | £6.8 | 6.66 | 34.0% | available |
+| Patrick Dorgu | DEF | Man Utd | £4.2 | 5.91 | 6.8% | available |
+| Declan Rice | MID | Arsenal | £7.3 | 7.58 | 28.8% | available |
+| James Garner | MID | Everton | £5.2 | 7.52 | 3.6% | available |
+| Bruno Guimarães Rodriguez Moura | MID | Newcastle | £7.2 | 7.52 | 23.3% | available |
+| Antoine Semenyo | MID | Man City | £7.6 | 6.70 | 44.8% | available |
+| Brenden Aaronson | MID | Leeds | £5.4 | 6.47 | 0.7% | available |
+| Igor Thiago Nascimento Rodrigues | FWD | Brentford | £7.1 | 8.17 | 35.4% | available |
+| Erling Haaland | FWD | Man City | £15.1 | 6.81 | 74.2% | available |
 
 ## Bench (ordered)
 | Player | Pos | Team | Price | Proj | Own% | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| Jordan Pickford | GK | Everton | £5.5 | 4.65 | 10.8% | available |
-| Neco Williams | DEF | Nott'm Forest | £4.7 | 6.00 | 3.4% | available |
-| Joško Gvardiol | DEF | Man City | £5.9 | 5.90 | 8.3% | available |
-| Jarrod Bowen | FWD | West Ham | £7.5 | 5.10 | 6.5% | available |
+| Jordan Pickford | GK | Everton | £5.6 | 4.73 | 12.9% | available |
+| Ollie Watkins | FWD | Aston Villa | £8.8 | 6.20 | 13.8% | available |
+| Matheus Nunes | DEF | Man City | £5.5 | 5.70 | 4.5% | available |
+| Nordi Mukiele | DEF | Sunderland | £4.4 | 5.60 | 10.6% | available |
 
 ## Full 15-man squad
 | Player | Pos | Team | Price | Own% |
 | --- | --- | --- | --- | --- |
-| Trevoh Chalobah | DEF | Chelsea | £5.5 | 17.7% |
-| Rúben dos Santos Gato Alves Dias | DEF | Man City | £5.6 | 6.4% |
-| Malo Gusto | DEF | Chelsea | £4.9 | 2.2% |
-| Neco Williams | DEF | Nott'm Forest | £4.7 | 3.4% |
-| Joško Gvardiol | DEF | Man City | £5.9 | 8.3% |
-| Dominic Calvert-Lewin | FWD | Leeds | £5.6 | 3.7% |
-| Hugo Ekitiké | FWD | Liverpool | £8.6 | 18.7% |
-| Jarrod Bowen | FWD | West Ham | £7.5 | 6.5% |
-| Robert Lynch Sánchez | GK | Chelsea | £4.9 | 14.9% |
-| Jordan Pickford | GK | Everton | £5.5 | 10.8% |
-| Phil Foden | MID | Man City | £8.8 | 35.7% |
-| Bruno Borges Fernandes | MID | Man Utd | £9.3 | 28.2% |
-| Harry Wilson | MID | Fulham | £5.6 | 11.9% |
-| Morgan Rogers | MID | Aston Villa | £7.1 | 12.4% |
-| Bukayo Saka | MID | Arsenal | £10.3 | 22.6% |
+| Nathan Collins | DEF | Brentford | £5.0 | 3.5% |
+| Gabriel dos Santos Magalhães | DEF | Arsenal | £6.8 | 34.0% |
+| Patrick Dorgu | DEF | Man Utd | £4.2 | 6.8% |
+| Matheus Nunes | DEF | Man City | £5.5 | 4.5% |
+| Nordi Mukiele | DEF | Sunderland | £4.4 | 10.6% |
+| Igor Thiago Nascimento Rodrigues | FWD | Brentford | £7.1 | 35.4% |
+| Erling Haaland | FWD | Man City | £15.1 | 74.2% |
+| Ollie Watkins | FWD | Aston Villa | £8.8 | 13.8% |
+| Caoimhín Kelleher | GK | Brentford | £4.6 | 9.9% |
+| Jordan Pickford | GK | Everton | £5.6 | 12.9% |
+| Declan Rice | MID | Arsenal | £7.3 | 28.8% |
+| James Garner | MID | Everton | £5.2 | 3.6% |
+| Bruno Guimarães Rodriguez Moura | MID | Newcastle | £7.2 | 23.3% |
+| Antoine Semenyo | MID | Man City | £7.6 | 44.8% |
+| Brenden Aaronson | MID | Leeds | £5.4 | 0.7% |
 
 ## Notes (grounded)
 - This report only uses the optimized squad JSON produced by the optimizer tool; it does not introduce any additional players.
@@ -58,70 +58,69 @@
 ```
 | Team | Fixture_Difficulty_Score | Number_of_good_fixtures | Number_of_bad_fixtures | Special_notes |
 |---|---:|---:|---:|---|
-| Arsenal | 2.00 | 1 | 0 |  |
-| Aston Villa | 2.00 | 1 | 0 |  |
-| Burnley | 2.00 | 1 | 0 |  |
 | Brentford | 2.00 | 1 | 0 |  |
-| Chelsea | 2.00 | 1 | 0 |  |
-| Fulham | 2.00 | 1 | 0 |  |
+| Everton | 2.00 | 1 | 0 |  |
+| Man Utd | 2.00 | 1 | 0 |  |
+| Newcastle | 2.00 | 1 | 0 |  |
+| Nott'm Forest | 2.00 | 1 | 0 |  |
+| West Ham | 2.00 | 1 | 0 |  |
+| Aston Villa | 3.00 | 0 | 0 |  |
+| Burnley | 3.00 | 0 | 0 |  |
 | Bournemouth | 3.00 | 0 | 0 |  |
-| Everton | 3.00 | 0 | 0 |  |
-| Leeds | 3.00 | 0 | 0 |  |
-| Liverpool | 3.00 | 0 | 0 |  |
+| Chelsea | 3.00 | 0 | 0 |  |
+| Crystal Palace | 3.00 | 0 | 0 |  |
+| Fulham | 3.00 | 0 | 0 |  |
 | Man City | 3.00 | 0 | 0 |  |
-| Man Utd | 3.00 | 0 | 0 |  |
-| Newcastle | 3.00 | 0 | 0 |  |
-| Nott'm Forest | 3.00 | 0 | 0 |  |
 | Sunderland | 3.00 | 0 | 0 |  |
-| Spurs | 3.00 | 0 | 0 |  |
-| West Ham | 3.00 | 0 | 0 |  |
+| Wolves | 3.00 | 0 | 0 |  |
+| Arsenal | 4.00 | 0 | 1 |  |
 | Brighton | 4.00 | 0 | 1 |  |
-| Crystal Palace | 4.00 | 0 | 1 |  |
-| Wolves | 5.00 | 0 | 1 |  |
+| Leeds | 4.00 | 0 | 1 |  |
+| Spurs | 4.00 | 0 | 1 |  |
+| Liverpool | 5.00 | 0 | 1 |  |
 
 
 ```json
 {
-  "from_event": 16,
+  "from_event": 21,
   "horizon_gameweeks": 1,
   "team_multipliers": {
-    "1": 1.075,
-    "2": 1.075,
-    "3": 1.075,
+    "1": 0.9249999999999999,
+    "2": 0.9999999999999999,
+    "3": 0.9999999999999999,
     "4": 0.9999999999999999,
     "5": 1.075,
     "6": 0.9249999999999999,
-    "7": 1.075,
-    "8": 0.9249999999999999,
-    "9": 0.9999999999999999,
-    "10": 1.075,
+    "7": 0.9999999999999999,
+    "8": 0.9999999999999999,
+    "9": 1.075,
+    "10": 0.9999999999999999,
 ```
 
 ## Watchlist context (excerpt)
 ```
 ```
 | Name | Team | Position | Price | Total_Points | Form | ep_next | Minutes | Injury_or_flag_status | Ownership_% | ICT_Index | Fixture_Outlook |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Harry Wilson | Fulham | MID | 5.60 | 78 | 8.80 | 8.80 | 1066 | available | 11.90 | 79.50 | good |
-| Trevoh Chalobah | Chelsea | DEF | 5.50 | 91 | 7.20 | 7.20 | 1290 | available | 17.70 | 61.40 | good |
-| Phil Foden | Man City | MID | 8.80 | 88 | 11.40 | 11.90 | 1135 | available | 35.70 | 115.40 | mixed |
-| Malo Gusto | Chelsea | DEF | 4.90 | 68 | 5.80 | 5.80 | 887 | available | 2.20 | 51.30 | good |
-| Neco Williams | Nott'm Forest | DEF | 4.70 | 50 | 6.00 | 6.00 | 1440 | available | 3.40 | 71.90 | mixed |
-| Jan Paul van Hecke | Brighton | DEF | 4.50 | 66 | 5.20 | 5.20 | 1440 | available | 4.00 | 75.00 | bad |
-| Marc Guéhi | Crystal Palace | DEF | 5.30 | 92 | 5.60 | 5.60 | 1350 | available | 40.30 | 65.80 | bad |
-| Rúben dos Santos Gato Alves Dias | Man City | DEF | 5.60 | 75 | 6.00 | 6.50 | 1355 | available | 6.40 | 51.20 | mixed |
-| Diogo Dalot Teixeira | Man Utd | DEF | 4.40 | 47 | 5.00 | 5.00 | 954 | available | 1.60 | 50.80 | mixed |
-| Boubacar Kamara | Aston Villa | MID | 4.90 | 51 | 5.60 | 5.60 | 1070 | available | 0.50 | 49.50 | good |
-| Dominic Calvert-Lewin | Leeds | FWD | 5.60 | 57 | 6.40 | 6.40 | 943 | available | 3.70 | 70.40 | mixed |
-| Morgan Rogers | Aston Villa | MID | 7.10 | 76 | 8.20 | 8.20 | 1426 | available | 12.40 | 90.40 | good |
-| Maxim De Cuyper | Brighton | DEF | 4.30 | 40 | 4.80 | 4.80 | 700 | available | 2.10 | 52.00 | bad |
-| Wesley Fofana | Chelsea | DEF | 4.40 | 37 | 4.40 | 4.40 | 577 | available | 0.40 | 17.10 | good |
-| Robert Lynch Sánchez | Chelsea | GK | 4.90 | 63 | 5.20 | 5.20 | 1354 | available | 14.90 | 32.10 | good |
-| Anton Stach | Leeds | MID | 4.80 | 64 | 4.80 | 4.80 | 1090 | available | 1.70 | 76.80 | mixed |
-| Malick Thiaw | Newcastle | DEF | 5.00 | 52 | 5.20 | 5.20 | 1082 | available | 2.80 | 50.30 | mixed |
-| James Tarkowski | Everton | DEF | 5.50 | 74 | 6.20 | 5.20 | 1440 | available | 7.60 | 61.10 | mixed |
-| Kenny Tete | Fulham | DEF | 4.50 | 49 | 4.60 | 4.60 | 1125 | available | 0.90 | 47.00 | good |
-| Maxence Lacroix | Crystal Palace | DEF | 5.20 | 81 | 5.00 | 5.00 | 1440 | available | 7.10 | 47.50 | bad |
-| Adam Wharton | Crystal Palace | MID | 5.00 | 52 | 5.20 | 5.20 | 1118 | available | 0.60 | 54.40 | bad |
-| Nicolò Savona | Nott'm Forest | DEF | 4.50 | 35 | 4.60 | 4.60 | 834 | available | 0.20 | 37.50 | mixed |
-```
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Nathan Collins | Brentford | DEF | 5.00 | 89 | 8.80 | 8.80 | 1816 | available | 3.50 | 91.10 | good |
+| Caoimhín Kelleher | Brentford | GK | 4.60 | 81 | 7.60 | 7.60 | 1890 | available | 9.90 | 54.50 | good |
+| Vitaly Janelt | Brentford | MID | 4.90 | 52 | 7.20 | 7.20 | 758 | available | 0.30 | 45.60 | good |
+| Keane Lewis-Potter | Brentford | DEF | 4.90 | 65 | 7.00 | 7.00 | 904 | available | 2.40 | 46.60 | good |
+| Nordi Mukiele | Sunderland | DEF | 4.40 | 92 | 5.60 | 5.60 | 1710 | available | 10.60 | 71.30 | mixed |
+| James Garner | Everton | MID | 5.20 | 95 | 7.00 | 7.00 | 1883 | available | 3.60 | 109.80 | good |
+| Patrick Dorgu | Man Utd | DEF | 4.20 | 51 | 6.00 | 5.50 | 1159 | available | 6.80 | 84.80 | good |
+| Brenden Aaronson | Leeds | MID | 5.40 | 84 | 7.00 | 7.00 | 1242 | available | 0.70 | 94.00 | bad |
+| Yasin Ayari | Brighton | MID | 4.80 | 66 | 5.80 | 5.80 | 1519 | available | 0.40 | 62.30 | bad |
+| Tijjani Reijnders | Man City | MID | 5.20 | 78 | 5.80 | 6.30 | 1332 | available | 12.20 | 96.60 | mixed |
+| Mateus Mané | Wolves | FWD | 4.50 | 34 | 5.20 | 5.20 | 446 | available | 0.90 | 30.50 | mixed |
+| Micky van de Ven | Spurs | DEF | 4.60 | 89 | 4.80 | 4.80 | 1789 | available | 28.30 | 66.20 | bad |
+| Gabriel dos Santos Magalhães | Arsenal | DEF | 6.80 | 112 | 6.20 | 7.20 | 1265 | available | 34.00 | 67.30 | bad |
+| Pascal Struijk | Leeds | DEF | 4.30 | 58 | 4.80 | 4.80 | 1628 | available | 0.40 | 67.10 | bad |
+| Jaka Bijol | Leeds | DEF | 3.90 | 43 | 4.20 | 4.20 | 982 | available | 0.60 | 43.50 | bad |
+| Omar Alderete | Sunderland | DEF | 4.10 | 77 | 4.00 | 4.00 | 1469 | available | 6.50 | 69.10 | mixed |
+| Declan Rice | Arsenal | MID | 7.30 | 122 | 7.20 | 8.20 | 1695 | available | 28.80 | 132.80 | bad |
+| Igor Thiago Nascimento Rodrigues | Brentford | FWD | 7.10 | 120 | 7.60 | 7.60 | 1752 | available | 35.40 | 161.80 | good |
+| Dominic Calvert-Lewin | Leeds | FWD | 6.00 | 89 | 6.40 | 6.40 | 1309 | available | 13.60 | 111.30 | bad |
+| Matheus Nunes | Man City | DEF | 5.50 | 94 | 5.20 | 5.70 | 1575 | available | 4.50 | 71.00 | mixed |
+| Kevin Schade | Brentford | MID | 7.10 | 85 | 7.60 | 7.60 | 1645 | available | 2.70 | 122.20 | good |
+| Bart Verbruggen | Brighton | GK | 4.50 | 68 | 4.60 | 4.60 | 1890 | available | 5.90 | 55.90 | bad |

@@ -2,28 +2,66 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
-from typing import Any, Dict, List, Type
+from typing import Any, Dict, List, Optional, Type, Union
 
 from crewai.tools import BaseTool
 from pydantic import BaseModel, Field
 
 from fantasy_premier_league_optimization.fpl.api import bootstrap_static, team_mapping
 
+# Default paths for artifacts
+DEFAULT_OPTIMIZED_SQUAD_PATH = "artifacts/optimized_squad.json"
+DEFAULT_FIXTURES_PATH = "artifacts/fixtures.md"
+DEFAULT_PLAYER_WATCHLIST_PATH = "artifacts/player_watchlist.md"
+DEFAULT_REPORT_OUTPUT_PATH = "report.md"
+
+
+def _normalize_str_input(value: Any, default: str) -> str:
+    """
+    Normalize input that might be a string, dict (schema definition), or None.
+    LLMs sometimes pass the field schema definition instead of the actual value.
+    """
+    if value is None:
+        return default
+    if isinstance(value, str):
+        return value if value.strip() else default
+    if isinstance(value, dict):
+        # LLM passed schema definition like {'description': '...', 'type': 'str'}
+        # Fall back to default
+        return default
+    return default
+
+
+def _normalize_bool_input(value: Any, default: bool) -> bool:
+    """Normalize boolean input that might be bool, dict, string, or None."""
+    if value is None:
+        return default
+    if isinstance(value, bool):
+        return value
+    if isinstance(value, dict):
+        return default
+    if isinstance(value, str):
+        return value.lower() in ("true", "1", "yes")
+    return default
+
 
 class FPLGenerateReportInput(BaseModel):
-    optimized_squad_path: str = Field(
-        "artifacts/optimized_squad.json",
-        description="Path to optimized_squad.json produced by the optimizer task.",
+    optimized_squad_path: Optional[str] = Field(
+        default=None,
+        description=f"Path to optimized_squad.json (default: {DEFAULT_OPTIMIZED_SQUAD_PATH}).",
     )
-    fixtures_path: str = Field(
-        "artifacts/fixtures.md",
-        description="Path to fixtures.md produced by the fixture tool task.",
+    fixtures_path: Optional[str] = Field(
+        default=None,
+        description=f"Path to fixtures.md (default: {DEFAULT_FIXTURES_PATH}).",
     )
-    player_watchlist_path: str = Field(
-        "artifacts/player_watchlist.md",
-        description="Path to player_watchlist.md produced by the player watchlist tool task.",
+    player_watchlist_path: Optional[str] = Field(
+        default=None,
+        description=f"Path to player_watchlist.md (default: {DEFAULT_PLAYER_WATCHLIST_PATH}).",
     )
-    force_refresh: bool = Field(False, description="Force refresh of FPL bootstrap (only used for team names).")
+    force_refresh: Optional[bool] = Field(
+        default=None,
+        description="Force refresh of FPL bootstrap (default: false).",
+    )
 
 
 def _load_json_file(path: Path) -> Dict[str, Any]:
@@ -45,25 +83,33 @@ def _table(rows: List[List[str]], headers: List[str]) -> str:
 class FPLGenerateReportTool(BaseTool):
     name: str = "fpl_generate_report"
     description: str = (
-        "Generate a grounded FPL report strictly from existing tool outputs on disk "
-        "(especially artifacts/optimized_squad.json). This prevents hallucinated players/teams."
+        "Generate a grounded FPL report from existing tool outputs on disk. "
+        "Uses default artifact paths if none provided. Saves report to report.md automatically. "
+        "Call with empty arguments or no arguments to use all defaults."
     )
     args_schema: Type[BaseModel] = FPLGenerateReportInput
 
     def _run(
         self,
-        optimized_squad_path: str = "artifacts/optimized_squad.json",
-        fixtures_path: str = "artifacts/fixtures.md",
-        player_watchlist_path: str = "artifacts/player_watchlist.md",
-        force_refresh: bool = False,
+        optimized_squad_path: Optional[Union[str, Dict[str, Any]]] = None,
+        fixtures_path: Optional[Union[str, Dict[str, Any]]] = None,
+        player_watchlist_path: Optional[Union[str, Dict[str, Any]]] = None,
+        force_refresh: Optional[Union[bool, Dict[str, Any]]] = None,
+        **kwargs: Any,  # Absorb any extra malformed arguments
     ) -> str:
+        # Normalize inputs - handles cases where LLM passes dict schema instead of values
+        squad_path_str = _normalize_str_input(optimized_squad_path, DEFAULT_OPTIMIZED_SQUAD_PATH)
+        fx_path_str = _normalize_str_input(fixtures_path, DEFAULT_FIXTURES_PATH)
+        wl_path_str = _normalize_str_input(player_watchlist_path, DEFAULT_PLAYER_WATCHLIST_PATH)
+        do_refresh = _normalize_bool_input(force_refresh, False)
+
         base = Path.cwd()
-        squad_path = (base / optimized_squad_path).resolve()
-        fx_path = (base / fixtures_path).resolve()
-        wl_path = (base / player_watchlist_path).resolve()
+        squad_path = (base / squad_path_str).resolve()
+        fx_path = (base / fx_path_str).resolve()
+        wl_path = (base / wl_path_str).resolve()
 
         squad = _load_json_file(squad_path)
-        boot = bootstrap_static(force_refresh=force_refresh)
+        boot = bootstrap_static(force_refresh=do_refresh)
         teams = team_mapping(boot)
 
         starting = squad.get("starting_11", [])
@@ -145,7 +191,21 @@ class FPLGenerateReportTool(BaseTool):
 {watchlist_excerpt}
 ```
 """
+        # Save report directly to file to ensure it's persisted
+        # even if the agent doesn't return the exact tool output
+        report_output_path = base / DEFAULT_REPORT_OUTPUT_PATH
+        try:
+            report_output_path.write_text(report, encoding="utf-8")
+        except Exception:
+            pass  # Silently fail if we can't write - the return value is still valid
+
         return report
+
+
+
+
+
+
 
 
 

@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 500">
+  <defs>
+    <linearGradient id="inputGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#64748b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#475569;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="fixtureGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="scoutGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="optimizeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d97706;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="reportGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="outputGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ec4899;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#db2777;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1100" height="500" fill="#f8fafc"/>
+  
+  <!-- Title -->
+  <text x="550" y="35" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="600" fill="#1e293b">Fantasy Premier League Optimization - Agent Architecture</text>
+  
+  <!-- Input Section -->
+  <rect x="30" y="180" width="120" height="140" rx="8" fill="white" stroke="#e2e8f0" stroke-width="1" filter="url(#shadow)"/>
+  <text x="90" y="210" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#475569">INPUT</text>
+  <text x="90" y="235" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#64748b">FPL API</text>
+  <text x="90" y="255" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#64748b">bootstrap-static</text>
+  <text x="90" y="275" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#64748b">fixtures</text>
+  <line x1="90" y1="285" x2="90" y2="285" stroke="#e2e8f0"/>
+  <text x="90" y="305" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#64748b">User Prefs</text>
+
+  <!-- Arrow from Input -->
+  <line x1="150" y1="250" x2="185" y2="250" stroke="#cbd5e1" stroke-width="2"/>
+  <polygon points="185,245 195,250 185,255" fill="#cbd5e1"/>
+  
+  <!-- Agent 1: Fixture Analyst -->
+  <rect x="200" y="80" width="180" height="100" rx="20" fill="url(#fixtureGrad)" filter="url(#shadow)"/>
+  <text x="290" y="115" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="white">Fixture Analyst</text>
+  <text x="290" y="138" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="rgba(255,255,255,0.9)">Analyzes upcoming fixtures</text>
+  <text x="290" y="155" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="rgba(255,255,255,0.9)">Calculates difficulty ratings</text>
+  
+  <!-- Agent 2: Player Scout -->
+  <rect x="200" y="200" width="180" height="100" rx="20" fill="url(#scoutGrad)" filter="url(#shadow)"/>
+  <text x="290" y="235" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="white">Player Scout</text>
+  <text x="290" y="258" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="rgba(255,255,255,0.9)">Evaluates player form</text>
+  <text x="290" y="275" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="rgba(255,255,255,0.9)">Creates watchlist rankings</text>
+  
+  <!-- Agent 3: Optimization Engineer -->
+  <rect x="200" y="320" width="180" height="100" rx="20" fill="url(#optimizeGrad)" filter="url(#shadow)"/>
+  <text x="290" y="355" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="white">Optimization Engineer</text>
+  <text x="290" y="378" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="rgba(255,255,255,0.9)">ILP squad optimization</text>
+  <text x="290" y="395" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="rgba(255,255,255,0.9)">Budget &amp; position constraints</text>
+
+  <!-- Arrows between agents -->
+  <path d="M 380 130 Q 420 130 420 200 Q 420 250 380 250" stroke="#cbd5e1" stroke-width="2" fill="none" stroke-dasharray="5,3"/>
+  <polygon points="380,245 380,255 370,250" fill="#cbd5e1"/>
+  
+  <path d="M 380 250 Q 420 250 420 320 Q 420 370 380 370" stroke="#cbd5e1" stroke-width="2" fill="none" stroke-dasharray="5,3"/>
+  <polygon points="380,365 380,375 370,370" fill="#cbd5e1"/>
+
+  <!-- Tools Section -->
+  <rect x="450" y="70" width="200" height="360" rx="8" fill="white" stroke="#e2e8f0" stroke-width="1" filter="url(#shadow)"/>
+  <text x="550" y="100" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#475569">TOOLS</text>
+  
+  <rect x="470" y="120" width="160" height="45" rx="6" fill="#f1f5f9" stroke="#e2e8f0"/>
+  <text x="550" y="140" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="500" fill="#475569">FPLFixtureOutlookTool</text>
+  <text x="550" y="155" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#64748b">Team difficulty analysis</text>
+  
+  <rect x="470" y="175" width="160" height="45" rx="6" fill="#f1f5f9" stroke="#e2e8f0"/>
+  <text x="550" y="195" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="500" fill="#475569">FPLPlayerWatchlistTool</text>
+  <text x="550" y="210" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#64748b">Player ranking &amp; scoring</text>
+  
+  <rect x="470" y="230" width="160" height="45" rx="6" fill="#f1f5f9" stroke="#e2e8f0"/>
+  <text x="550" y="250" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="500" fill="#475569">FPLOptimizeSquadTool</text>
+  <text x="550" y="265" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#64748b">ILP optimization engine</text>
+  
+  <rect x="470" y="285" width="160" height="45" rx="6" fill="#f1f5f9" stroke="#e2e8f0"/>
+  <text x="550" y="305" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="500" fill="#475569">FPLGenerateReportTool</text>
+  <text x="550" y="320" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#64748b">Strategy report writer</text>
+
+  <rect x="470" y="340" width="160" height="45" rx="6" fill="#f1f5f9" stroke="#e2e8f0"/>
+  <text x="550" y="360" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="500" fill="#475569">FetchUrlTool</text>
+  <text x="550" y="375" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#64748b">External data fetching</text>
+
+  <!-- Dashed lines from agents to tools -->
+  <line x1="380" y1="130" x2="450" y2="142" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4,2"/>
+  <line x1="380" y1="250" x2="450" y2="197" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4,2"/>
+  <line x1="380" y1="370" x2="450" y2="252" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4,2"/>
+
+  <!-- Agent 4: Report Writer -->
+  <rect x="700" y="200" width="180" height="100" rx="20" fill="url(#reportGrad)" filter="url(#shadow)"/>
+  <text x="790" y="235" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="white">Report Writer</text>
+  <text x="790" y="258" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="rgba(255,255,255,0.9)">Synthesizes analysis</text>
+  <text x="790" y="275" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="rgba(255,255,255,0.9)">Generates strategy report</text>
+
+  <!-- Arrow to Report Writer -->
+  <line x1="650" y1="250" x2="695" y2="250" stroke="#cbd5e1" stroke-width="2"/>
+  <polygon points="695,245 705,250 695,255" fill="#cbd5e1"/>
+  
+  <!-- Arrow from Report Writer -->
+  <line x1="880" y1="250" x2="925" y2="250" stroke="#cbd5e1" stroke-width="2"/>
+  <polygon points="925,245 935,250 925,255" fill="#cbd5e1"/>
+
+  <!-- Output Section -->
+  <rect x="940" y="140" width="130" height="220" rx="8" fill="white" stroke="#e2e8f0" stroke-width="1" filter="url(#shadow)"/>
+  <text x="1005" y="170" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#475569">OUTPUT</text>
+  
+  <rect x="955" y="190" width="100" height="35" rx="4" fill="#fef3c7" stroke="#fcd34d"/>
+  <text x="1005" y="212" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#92400e">fixtures.md</text>
+  
+  <rect x="955" y="235" width="100" height="35" rx="4" fill="#d1fae5" stroke="#6ee7b7"/>
+  <text x="1005" y="257" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#065f46">player_watchlist.md</text>
+  
+  <rect x="955" y="280" width="100" height="35" rx="4" fill="#dbeafe" stroke="#93c5fd"/>
+  <text x="1005" y="302" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#1e40af">optimized_squad.json</text>
+  
+  <rect x="955" y="325" width="100" height="35" rx="4" fill="#ede9fe" stroke="#c4b5fd"/>
+  <text x="1005" y="347" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#5b21b6">report.md</text>
+
+  <!-- Footer badges -->
+  <rect x="410" y="455" width="80" height="25" rx="12" fill="#1e293b"/>
+  <text x="450" y="472" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="white">CrewAI</text>
+  
+  <rect x="500" y="455" width="100" height="25" rx="12" fill="#10a37f"/>
+  <text x="550" y="472" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="white">OpenAI GPT</text>
+  
+  <rect x="610" y="455" width="80" height="25" rx="12" fill="#3b82f6"/>
+  <text x="650" y="472" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="white">PuLP ILP</text>
+</svg>

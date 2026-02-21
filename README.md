@@ -2,6 +2,12 @@
 
 A **CrewAI**-powered pipeline that automates FPL player selection using official API data and integer-programming optimization.
 
+## Architecture
+
+<div align="center">
+  <img src="docs/architecture.svg" alt="System Architecture" width="100%"/>
+</div>
+
 ## Features
 
 - **4-agent crew**: Fixture Analyst → Player Scout → Optimization Engineer → Report Writer
